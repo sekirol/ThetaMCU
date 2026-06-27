@@ -35,9 +35,16 @@ set_target_properties(${PROJECT_NAME}
    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/${CMAKE_BUILD_TYPE}"
 )
 
+add_subdirectory(platform/stm32f4wb55)
+
+target_link_libraries(${PROJECT_NAME}
+PRIVATE
+    platform::stm32f4wb55
+)
+
 set(ASM_DEFS )
 
-set(C_DEFS )
+set(C_DEFS)
 
 set(CPP_DEFS )
 
