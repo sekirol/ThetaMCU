@@ -3,9 +3,6 @@
 int main()
 {
 
-}
+while (1) {}
 
-void Reset_handler()
-{
-    
 }
