@@ -1,14 +1,12 @@
 cmake_minimum_required(VERSION 3.28)
 
-set(PROJECT_NAME stm32f4wb55)
+set(PROJECT_NAME stm32wb55)
 
 set(PROJECT_NAMESPACE platform)
 
 project(${PROJECT_NAME}
         DESCRIPTION "STM32WB55 specific code"
         LANGUAGES C CXX ASM)
-
-set(STM32WB5Mxx)
 
 add_library(${PROJECT_NAME}
 STATIC

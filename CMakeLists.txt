@@ -35,11 +35,11 @@ set_target_properties(${PROJECT_NAME}
    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/${CMAKE_BUILD_TYPE}"
 )
 
-add_subdirectory(platform/stm32f4wb55)
+add_subdirectory(platform/stm32wb55)
 
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
-    platform::stm32f4wb55
+    platform::stm32wb55
 )
 
 set(ASM_DEFS )
@@ -93,8 +93,8 @@ target_compile_definitions(${PROJECT_NAME} PUBLIC
 
 # Устанавливаем флаги линкера
 target_link_options(${PROJECT_NAME} PUBLIC SHELL:
-    -T${CMAKE_CURRENT_SOURCE_DIR}/platform/stm32f4wb55/linker/stm32wb55xx_flash_cm4.ld
-    -L${CMAKE_CURRENT_SOURCE_DIR}/platform/stm32f4wb55/linker
+    -T${CMAKE_CURRENT_SOURCE_DIR}/platform/stm32wb55/linker/stm32wb55xx_flash_cm4.ld
+    -L${CMAKE_CURRENT_SOURCE_DIR}/platform/stm32wb55/linker
     ${${PROJECT_NAME}_CPU_FLAGS}
     --specs=nosys.specs -Wl,--gc-sections -static -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -Wl,-Map=${CMAKE_SOURCE_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_NAME}.map
 )
