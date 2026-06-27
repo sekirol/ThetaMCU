@@ -44,7 +44,7 @@ PRIVATE
 
 set(ASM_DEFS )
 
-set(C_DEFS)
+set(C_DEFS )
 
 set(CPP_DEFS )
 
