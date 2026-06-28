@@ -10,6 +10,20 @@ STATIC
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/stm32wbxx_it.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/syscalls.c
     ${CMAKE_CURRENT_SOURCE_DIR}/Src/sysmem.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_ll_rcc.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_rcc_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_flash.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_flash_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_gpio.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_hsem.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_dma_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_pwr_ex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_cortex.c
+    ${CMAKE_CURRENT_SOURCE_DIR}/STM32WBxx_HAL_Driver/Src/stm32wbxx_hal_exti.c
 )
 add_library(${PROJECT_NAMESPACE}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 

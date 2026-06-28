@@ -1,4 +1,5 @@
 #include "stm32wbxx_it.h"
+#include "stm32wbxx_hal.h"
 
 /**
   * @brief This function handles condition after restart.
@@ -79,5 +80,5 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-    // HAL_IncTick();
+    HAL_IncTick();
 }
