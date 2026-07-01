@@ -36,10 +36,12 @@ set_target_properties(${PROJECT_NAME}
 )
 
 add_subdirectory(platform/stm32wb55)
+add_subdirectory(platform/drivers)
 
 target_link_libraries(${PROJECT_NAME}
 PRIVATE
     platform::stm32wb55
+    platform::drivers
 )
 
 set(ASM_DEFS )
@@ -97,6 +99,7 @@ target_link_options(${PROJECT_NAME} PUBLIC SHELL:
     -L${CMAKE_CURRENT_SOURCE_DIR}/platform/stm32wb55/linker
     ${${PROJECT_NAME}_CPU_FLAGS}
     --specs=nosys.specs -Wl,--gc-sections -static -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group -Wl,-Map=${CMAKE_SOURCE_DIR}/${CMAKE_BUILD_TYPE}/${PROJECT_NAME}.map
+    -Wl,--print-memory-usage
 )
 
 # Генерация list-файла
